@@ -11,4 +11,5 @@ $ ./startFeature.sh -f FEATURE_NAME
 
 ## Subjects
 
-* [Main Template](/example/readmemd)
+* [Main Template](/example/readme.md)
+* [Loops](/Loops/readme.md)
