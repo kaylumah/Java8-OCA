@@ -8,7 +8,8 @@ public class Loops {
         // variations of the following 5 examples are likely to be seen on the exam 
 
         // InfiniteLoop();
-        MulitpleTermForStatement();
+        // MulitpleTermForStatement();
+        RedeclaringVariable();
     }
 
     public static void InfiniteLoop() {
@@ -39,5 +40,21 @@ public class Loops {
         // 1. You can declare a variable (x) before the loop begins, and use if after the loop ends
         // 2. Your initialization block, boolean expression and update statements can include extra variables that may not referecne each other
         // 3. The update statement can update multiple variables (x,y)
+    }
+
+    public static void RedeclaringVariable() {
+        // int x = 0;
+        // error: variable x is already defined in method RedeclaringVariable()
+        // for (long y = 0, x = 4; x < 5 && y < 10; x++, y++) {
+        //    System.out.println("x " + x);
+        // }
+
+
+        // DOES COMPILE SINCE WE ARE ONLY ASSIGNING VALUE, NOT DECLARING A VARIABLE
+        int x = 0;
+        long y = 10;
+        for (y = 0, x = 4; x < 5 && y < 10; x++, y++) {
+           System.out.println("x " + x);
+        }
     }
 }
