@@ -9,7 +9,8 @@ public class Loops {
 
         // InfiniteLoop();
         // MulitpleTermForStatement();
-        RedeclaringVariable();
+        // RedeclaringVariable();
+        IncompetibleTypes();
     }
 
     public static void InfiniteLoop() {
@@ -56,5 +57,13 @@ public class Loops {
         for (y = 0, x = 4; x < 5 && y < 10; x++, y++) {
            System.out.println("x " + x);
         }
+    }
+
+    public static void IncompetibleTypes(){
+        // DOES NOT COMPILE, SINCE ALL THE VARIABLES IN THE initialization block
+        // MUST BE OF THE SAME TYPE
+       // for (long y = 0, int x = 4; x < 5 && y < 10; x++, y++) {
+       //     System.out.println(x + " ");
+       // }
     }
 }
