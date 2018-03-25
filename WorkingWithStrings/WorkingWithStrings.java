@@ -49,10 +49,10 @@ public class WorkingWithStrings {
         stringIndexOf();
         stringSubstring(); // 107
         stringUpperCaseAndLowerCase();
-        stringEqualsAndEqualsIgnoreCase();
+        stringEqualsAndEqualsIgnoreCase(); // 109
         stringStartsWithAndEndsWith();
         stringContains();
-        stringReplace();
+        stringReplace(); // 110
         stringTrim();
     }
 
@@ -104,26 +104,50 @@ public class WorkingWithStrings {
     }
 
     private static void stringUpperCaseAndLowerCase() {
-
+        String animals = "animals";
+        // only need to remember strings are immutable so original string is unchanged
+        System.out.println(animals.toUpperCase()); // ANIMALS
+        System.out.println("Abc123".toLowerCase()); // abc123
+        System.out.println(animals); // animals
     }
 
     private static void stringEqualsAndEqualsIgnoreCase() {
-
+        // boolean equals(Object obj)
+        // boolean equalsIgnoreCase(String str)
+        System.out.println("abc".equals("ABC")); // false
+        System.out.println("ABC".equals("ABC")); // true
+        System.out.println("abc".equalsIgnoreCase("ABC")); // true
     }
 
     private static void stringStartsWithAndEndsWith() {
-
+        // NOTE: case sensitive
+        System.out.println("abc".startsWith("a")); // true
+        System.out.println("abc".startsWith("A")); // false
+        System.out.println("abc".endsWith("c")); // true
+        System.out.println("abc".endsWith("a")); // false
     }
 
     private static void stringContains() {
-
+        // NOTE: case sensitive
+        System.out.println("abc".contains("b")); // true
+        System.out.println("abc".contains("B")); // false
+        // NOTE: convience method so you don't have to write str.indexOf(otherString) != -1
     }
 
     private static void stringReplace() {
+        // String replace(char oldChar, char newChar)
+        // String replace(CharSequence oldChar, CharSequence newChar)
 
+        System.out.println("abcabc".replace('a', 'A')); // AbcAbc => 1 signature
+        System.out.println("abcabc".replace("a", "A")); // AbcAbc => 2 signature
+
+        // NOTE: CharSequence is a general way of representing multiple classes like String and StringBuilder
+        // https://docs.oracle.com/javase/7/docs/api/java/lang/CharSequence.html
+        // https://stackoverflow.com/questions/11323962/exact-difference-between-charsequence-and-string-in-java
     }
 
     private static void stringTrim() {
-
+        System.out.println("abc".trim()); // abc
+        System.out.println("\t    a b c \n".trim()); // a b c
     }
 }
