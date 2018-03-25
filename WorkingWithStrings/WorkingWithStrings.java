@@ -85,7 +85,22 @@ public class WorkingWithStrings {
     }
 
     private static void stringSubstring() {
+        /**
+            Substring returns part of a sequence in a String.
+            The first parameter is the 0-based index to start for the returned string.
+            The second parameter is the index you want to STOP at.
+                This means the endIndex can be one past the number in the sequence.
+                In your own code this would be redudant, but the exam can use it. 
+         */
+        String animals = "animals";
+        System.out.println(animals.substring(3)); // mals
+        System.out.println(animals.substring(animals.indexOf('m'))); // mals
+        System.out.println(animals.substring(3,4)); // m // start with 3 until, not including 4 (same as charAt 3)
+        System.out.println(animals.substring(3,7)); // mals // 7 is the same as end of the string, so we take 6 as last
 
+        System.out.println(animals.substring(3,3)); // empty string
+        // System.out.println(animals.substring(3,2)); // java.lang.StringIndexOutOfBoundsException: begin 3, end 2, length 7
+        // System.out.println(animals.substring(3, 8)); // java.lang.StringIndexOutOfBoundsException: begin 3, end 8, length 7
     }
 
     private static void stringUpperCaseAndLowerCase() {
