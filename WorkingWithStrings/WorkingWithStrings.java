@@ -37,10 +37,17 @@ public class WorkingWithStrings {
     }
 
     private static void importantStringMethods() {
-        stringLength();
-        stringCharAt();
+
+        /**
+            The String class has dozens of methods.
+            For the exam you only need a dozen.
+            For all remember a String is a sequence of Characters and counts from 0 when indexed.
+         */
+
+        stringLength(); // 106
+        stringCharAt(); 
         stringIndexOf();
-        stringSubstring();
+        stringSubstring(); // 107
         stringUpperCaseAndLowerCase();
         stringEqualsAndEqualsIgnoreCase();
         stringStartsWithAndEndsWith();
@@ -50,11 +57,18 @@ public class WorkingWithStrings {
     }
 
     private static void stringLength() {
-
+        String animals = "animals";
+        System.out.println(animals.length()); // 7 counting uses non-0 based
     }
 
     private static void stringCharAt() {
+        String animals = "animals";
+        System.out.println(animals.charAt(0)); // a
+        System.out.println(animals.charAt(6)); // s
+        // System.out.println(animals.charAt(7)); // Exception java.lang.StringIndexOutOfBoundsException: String index out of range: 7
 
+        // because of 0-based index the charAt(0) returns first character in the sequence.
+        // charAt(7) returns the 8 character that doesn't exist and throws a exception
     }
 
     private static void stringIndexOf() {
