@@ -72,7 +72,16 @@ public class WorkingWithStrings {
     }
 
     private static void stringIndexOf() {
+        String animals = "animals";
+        System.out.println(animals.indexOf('a')); // 0
+        System.out.println(animals.indexOf("al")); // 4
+        System.out.println(animals.indexOf('a', 4)); // 4
+        System.out.println(animals.indexOf("al", 5)); // -1
 
+        /**
+            unlike charAt, the indexOf doesn't throw an exception.
+            since indexing begins at 0 the caller knows -1 cannot be a valid index
+         */
     }
 
     private static void stringSubstring() {
