@@ -54,6 +54,24 @@ public class WorkingWithStrings {
         stringContains();
         stringReplace(); // 110
         stringTrim();
+
+        // It's common practice to use method chaining
+        String start = "AniMal    ";
+        String trimmed = start.trim(); // "AniMal"
+        String lowerCase = trimmed.toLowerCase(); // "animal"
+        String result = lowerCase.replace('a', 'A'); // AnimAl
+        System.out.println(result);
+
+        System.out.println(start
+            .trim()
+            .toLowerCase()
+            .replace('a', 'A'));  // AnimAl
+
+        String a = "abc";
+        String b = a.toUpperCase();
+        b = b.replace("B", "2").replace('C', '3');
+        System.out.println("a=" + a);  // a=abc
+        System.out.println("b=" + b); // b=A23
     }
 
     private static void stringLength() {
