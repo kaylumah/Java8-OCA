@@ -26,6 +26,18 @@ public class WorkingWithStringBuilders {
 
         // StringBuilder changes own state and then returns a reference.
 
+        StringBuilderMethods();
+    }
 
+    private static void StringBuilderMethods(){
+        // charAt, indexOf, length, substring work the same as on string
+
+        // append
+
+        // insert 
+        // int offset => index where we want to insert the requested parameter.
+
+        // delete, deleteCharAt
+        // reveverse
     }
 }
